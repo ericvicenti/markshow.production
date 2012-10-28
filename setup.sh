@@ -25,7 +25,7 @@ sudo service monit stop
 sudo service markshow stop
 sudo cp -f $setup_path/upstart.conf /etc/init/markshow.conf
 sudo cp -f $setup_path/monitrc /etc/monit/monitrc
-sudo cp -f $setup_path/ngnix/vhost.conf /etc/nginx/sites-available/markshow.org.conf
+sudo cp -f $setup_path/nginx/vhost.conf /etc/nginx/sites-available/markshow.org.conf
 sudo ln -s /etc/nginx/sites-available/markshow.org.conf /etc/nginx/sites-enabled/markshow.org.conf
 sudo service ngnix restart
 sudo service monit start
