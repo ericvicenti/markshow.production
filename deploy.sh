@@ -45,8 +45,15 @@ mv $path $path`date +"%Y%m%d%H%M%S"`
 echo '...done!'
 echo ''
 
+echo 'Changing permissions...'
+sudo chown -r markshow:markshow $tmp
+sudo mv $tmp $path
+echo '...done!'
+echo ''
+
 echo 'Switch to latest version...'
-mv $tmp $path
+sudo chown markshow:markshow $tmp
+sudo mv $tmp $path
 echo '...done!'
 echo ''
 
