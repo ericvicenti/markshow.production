@@ -18,8 +18,8 @@ echo '...done!'
 echo ''
 
 echo 'Switching configs to production mode...'
-mv $tmp/configs/env.prod.js $tmp/configs/env.js
-mv $tmp/package.prod.json $tmp/package.json
+sudo mv $tmp/configs/env.prod.js $tmp/configs/env.js
+sudo mv $tmp/package.prod.json $tmp/package.json
 echo '...done!'
 echo ''
 
@@ -41,7 +41,7 @@ echo '...done!'
 echo ''
 
 echo 'Backing up old version...'
-mv $path $path`date +"%Y%m%d%H%M%S"`
+sudo mv $path $path`date +"%Y%m%d%H%M%S"`
 echo '...done!'
 echo ''
 
