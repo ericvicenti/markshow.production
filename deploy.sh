@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Run this script from anywhere, as somebody who can sudo. It will use a directory in their home folder called markshow
+# Run this script from anywhere, as somebody who can sudo
 
 path=/home/markshow/markshow
-tmp=~/markshow
+tmp=/tmp/markshow
 
 echo 'Cloning repo from github...'
 rm -fr $tmp
@@ -47,12 +47,10 @@ echo ''
 
 echo 'Changing permissions...'
 sudo chown -r markshow:markshow $tmp
-sudo mv $tmp $path
 echo '...done!'
 echo ''
 
 echo 'Switch to latest version...'
-sudo chown markshow:markshow $tmp
 sudo mv $tmp $path
 echo '...done!'
 echo ''
