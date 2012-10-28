@@ -25,7 +25,7 @@ set logfile /home/markshow/log/monit.log
 
 # This is a must for $ monit status
 set httpd port 2812 and
-    allow markshow_monit:M4rk!tUP
+    allow markshow_monit:markshowFTW
 
 check system markshow.sys
       start "/sbin/start markshow" with timeout 60 seconds
