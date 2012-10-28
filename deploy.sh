@@ -46,7 +46,7 @@ echo '...done!'
 echo ''
 
 echo 'Changing permissions...'
-sudo chown -r markshow:markshow $tmp
+sudo chown -R markshow:markshow $tmp
 echo '...done!'
 echo ''
 
