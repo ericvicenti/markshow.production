@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Copy this script to $HOME and run it
+# Run this script from anywhere, as somebody who can sudo. It will use a directory in their home folder called markshow
 
-path=/path/to/the/app_root/app
-tmp=/path/to/the/app_root/tmp
+path=/home/markshow/markshow
+tmp=~/markshow
 
 echo 'Cloning repo from github...'
-git clone git@github.com:github_username/your_app_name.git $tmp
+rm -fr $tmp
+git clone git@github.com:ericvicenti/markshow.git $tmp
 echo '...done!'
 echo ''
 
@@ -30,22 +31,12 @@ echo ''
 
 echo 'Stopping monit...'
 sudo /etc/init.d/monit stop
-sudo monit stop your_app_name
+sudo monit stop markshow
 echo '...done!'
 echo ''
 
 echo 'Stopping app server...'
-sudo stop your_app_name
-echo '...done!'
-echo ''
-
-echo 'Stopping mongodb...'
-sudo stop mongodb
-echo '...done!'
-echo ''
-
-echo 'Removing mongodb lock file...'
-sudo rm -r /var/lib/mongodb/mongod.lock
+sudo stop markshow
 echo '...done!'
 echo ''
 
@@ -59,18 +50,13 @@ mv $tmp $path
 echo '...done!'
 echo ''
 
-echo 'Starting mongodb...'
-sudo start mongodb
-echo '...done!'
-echo ''
-
 echo 'Starting app server...'
-sudo start your_app_name
+sudo start markshow
 echo '...done!'
 echo ''
 
 echo 'Starting monit...'
 sudo /etc/init.d/monit start
-sudo monit start your_app_name
+sudo monit start markshow
 echo '...done!'
 echo ''
