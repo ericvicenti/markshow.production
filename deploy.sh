@@ -30,13 +30,12 @@ echo '...done!'
 echo ''
 
 echo 'Stopping monit...'
-sudo /etc/init.d/monit stop
 sudo monit stop markshow
 echo '...done!'
 echo ''
 
 echo 'Stopping app server...'
-sudo stop markshow
+sudo service markshow stop
 echo '...done!'
 echo ''
 
@@ -56,12 +55,11 @@ echo '...done!'
 echo ''
 
 echo 'Starting app server...'
-sudo start markshow
+sudo service markshow start
 echo '...done!'
 echo ''
 
 echo 'Starting monit...'
-sudo /etc/init.d/monit start
 sudo monit start markshow
 echo '...done!'
 echo ''
