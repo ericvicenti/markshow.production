@@ -35,6 +35,6 @@ sudo chown root:root /etc/nginx/sites-available/markshow.org.conf
 
 sudo ln -s /etc/nginx/sites-available/markshow.org.conf /etc/nginx/sites-enabled/markshow.org.conf
 
-sudo service ngnix restart
+sudo service nginx restart
 sudo service monit start
 sudo service markshow start
