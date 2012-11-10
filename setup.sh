@@ -12,7 +12,7 @@ sudo apt-get -y install git monit nginx
 sudo useradd markshow
 sudo mkdir /home/markshow
 sudo mkdir /home/markshow/log
-sudo chown -r markshow:markshow /home/markshow
+sudo chown -R markshow:markshow /home/markshow
 
 # Clone repo
 rm -rf ~/markshow
