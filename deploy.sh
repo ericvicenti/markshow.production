@@ -19,7 +19,6 @@ echo ''
 
 echo 'Switching configs to production mode...'
 sudo mv $tmp/configs/env.prod.js $tmp/configs/env.js
-sudo mv $tmp/package.prod.json $tmp/package.json
 echo '...done!'
 echo ''
 
